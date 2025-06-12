@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "Bahnschrift"; /* Give your font a recognizable name */
+  src: url("./assets/font/Bahnschrift-Font-Family/BAHNSCHRIFT.TTF") format("truetype");
+  font-weight: normal; /* Define the weight for this specific file */
+  font-style: normal; /* Define the style for this specific file */
+}
+
+/* Industrial group from Modern Font Stacks  */
+/* font-family: Bahnschrift, 'DIN Alternate', sans-serif;
+font-weight: normal; */
