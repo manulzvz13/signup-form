@@ -1,13 +1,16 @@
 @font-face {
-  font-family: "Bahnschrift"; 
-  src: url("./assets/font/Bahnschrift-Font-Family/BAHNSCHRIFT.TTF") format("truetype");
+  font-family: "Bahnschrift";
+  src: url("./assets/font/Bahnschrift-Font-Family/BAHNSCHRIFT.TTF")
+    format("truetype");
   font-weight: normal;
-  font-style: normal; 
+  font-style: normal;
 }
 
 /* Reset by Josh Comeau */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -26,16 +29,29 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
@@ -43,7 +59,12 @@ p {
   text-wrap: pretty;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
 
@@ -52,40 +73,75 @@ h1, h2, h3, h4, h5, h6 {
 /* Element font styling  */
 
 html {
-    font-size: calc(0.75rem + 1.5vw);
+  font-size: calc(0.75rem + 1.5vw);
 }
 
 .background-section > p {
-    font-size: calc(0.65rem + 0.2vw);
-    color: white;
+  font-size: calc(0.35rem + 0.2vw);
+  color: white;
 }
 
 .form-module > label {
-    font-size: calc(0.75rem + 0.3vw);
+  font-size: calc(0.75rem + 0.3vw);
 }
 
 div,
 p,
 h2 {
-    font-family: Bahnschrift, 'DIN Alternate', sans-serif;
+  font-family: Bahnschrift, "DIN Alternate", sans-serif;
 }
 
-p, 
+p,
 h2 {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .login-account-section > p {
-    font-weight: normal;
-    font-size: calc(0.75rem + 0.2vw);
+  font-weight: normal;
+  font-size: calc(0.75rem + 0.2vw);
 }
 
 div {
-    font-weight: normal;
+  font-weight: normal;
 }
 
+/* Flexbox layout */
 
+.landing-page {
+  display: flex;
+}
 
+.background-section {
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  position: relative;
+  overflow: hidden;
+}
 
+.background-section > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
+.background-section > p {
+    position: absolute;
+    bottom: 0;
+}
 
+#odin-logo {
+  position: absolute;
+  top: 50%; /* Move the top edge to the vertical center */
+  left: 50%; /* Move the left edge to the horizontal center */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Adjust position to truly center it based on its own size */
+  /* Scaling the logo */
+  width: 50%; /* Example: Logo takes 50% of the parent's width */
+  max-width: 150px; /* Optional: Set a maximum width to prevent it from getting too big */
+  height: auto; /* Maintain aspect ratio based on width */
+}
