@@ -1,23 +1,20 @@
 @font-face {
-  font-family: "Bahnschrift"; /* Give your font a recognizable name */
+  font-family: "Bahnschrift"; 
   src: url("./assets/font/Bahnschrift-Font-Family/BAHNSCHRIFT.TTF") format("truetype");
-  font-weight: normal; /* Define the weight for this specific file */
-  font-style: normal; /* Define the style for this specific file */
+  font-weight: normal;
+  font-style: normal; 
 }
 
 /* Reset by Josh Comeau */
 
-/* 1. Use a more-intuitive box-sizing model */
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
-/* 2. Remove default margin */
 * {
   margin: 0;
 }
 
-/* 3. Enable keyword animations */
 @media (prefers-reduced-motion: no-preference) {
   html {
     interpolate-size: allow-keywords;
@@ -25,44 +22,70 @@
 }
 
 body {
-  /* 4. Add accessible line-height */
   line-height: 1.5;
-  /* 5. Improve text rendering */
   -webkit-font-smoothing: antialiased;
 }
 
-/* 6. Improve media defaults */
 img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
 }
 
-/* 7. Inherit fonts for form controls */
 input, button, textarea, select {
   font: inherit;
 }
 
-/* 8. Avoid text overflows */
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
-/* 9. Improve line wrapping */
 p {
   text-wrap: pretty;
 }
+
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
 
-/*
-  10. Create a root stacking context
-*/
-#root, #__next {
-  isolation: isolate;
+/* Login Form Page Style */
+
+/* Element font styling  */
+
+html {
+    font-size: calc(0.75rem + 1.5vw);
+}
+
+.background-section > p {
+    font-size: calc(0.65rem + 0.2vw);
+    color: white;
+}
+
+.form-module > label {
+    font-size: calc(0.75rem + 0.3vw);
+}
+
+div,
+p,
+h2 {
+    font-family: Bahnschrift, 'DIN Alternate', sans-serif;
+}
+
+p, 
+h2 {
+    font-weight: bold;
+}
+
+.login-account-section > p {
+    font-weight: normal;
+    font-size: calc(0.75rem + 0.2vw);
+}
+
+div {
+    font-weight: normal;
 }
 
 
-/* Industrial group from Modern Font Stacks  */
-/* font-family: Bahnschrift, 'DIN Alternate', sans-serif;
-font-weight: normal; */
+
+
+
+
