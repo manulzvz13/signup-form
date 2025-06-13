@@ -23,23 +23,22 @@
   /* Global Font Size Variables */
   --base-rem: 1rem; /* Browser's 16px */
   /* Viewport Width (vw) scaling factors */
-  --vw-small: 0.25vw; /* For base html font size, or smaller elements */
-  --vw-medium: 0.5vw;  /* For paragraphs, inputs */
-  --vw-large: 1.5vw;   /* For larger headings (h1, h2) */
-  --vw-extra-large: 2.5vw; /* For very large display headings */
+  --vw-small: 0.25vw; 
+  --vw-medium: 0.5vw; 
+  --vw-large: 1.5vw;  
+  --vw-extra-large: 2.5vw;
   /* Clamp definitions of MIN, MAX */
   --html-fs-min: 14px;
   --html-fs-max: 18px;
-  --p-fs-min: 1rem;    /* 14px */
-  --p-fs-max: 1.25rem; /* 22.5px */
-  --h1-fs-min: 2.5rem; /* 35px */
-  --h1-fs-max: 4rem;   /* 72px */
-  --caption-fs-min: 0.75rem; /* 10.5px */
-  --caption-fs-max: 1rem;    /* 18px */
+  --p-fs-min: 1rem;    
+  --p-fs-max: 1.25rem; 
+  --h1-fs-min: 2.5rem; 
+  --h1-fs-max: 4rem;   
+  --caption-fs-min: 0.75rem; 
+  --caption-fs-max: 1rem;    
   --input-fs-min: 1rem;    
   --input-fs-max: 1.25rem;
 } 
-
 
 /* Reset by Josh Comeau */
 
@@ -238,11 +237,22 @@ body {
   flex-direction: column;
 }
 
-.form-1,
-.form-2,
-.form-3 {
+fieldset {
   flex: 1;
   display: flex;
+  border: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 .form-module {

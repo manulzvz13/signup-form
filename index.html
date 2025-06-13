@@ -30,36 +30,39 @@
                 <form action="#" method="post">
                     <div class="form-card">
                         <h2>Let's do this!</h2>
-                        <div class="form-1">
+                        <fieldset>
+                            <legend class="sr-only">Personal Information</legend>
                             <div class="form-module">
-                                <label for="fname">FIRST NAME</label>
-                                <input class="input-box" type="text" id="fname" name="fname"/>
+                                <label for="firstName">FIRST NAME</label>
+                                <input class="input-box" type="text" id="firstName" name="firstName" autocomplete="given-name"/>
                             </div>
                             <div class="form-module">
-                                <label for="lname">LAST NAME</label>
-                                <input class="input-box" type="text" id="lname" name="lname" />
+                                <label for="lastName">LAST NAME</label>
+                                <input class="input-box" type="text" id="lastName" name="lastName" autocomplete="family-name" />
                             </div>
-                        </div>
-                        <div class="form-2">
+                        </fieldset>
+                        <fieldset>
+                            <legend class="sr-only">Contact Information</legend>
                             <div class="form-module">
                                 <label for="email">EMAIL</label>
-                                <input class="input-box" type="email" id="email" name="email" />
+                                <input class="input-box" type="email" id="email" name="email" autocomplete="email"/>
                             </div>
                             <div class="form-module">
                                 <label for="phone">PHONE NUMBER</label>
-                                <input class="input-box" type="tel" id="phone" name="phone" />
+                                <input class="input-box" type="tel" id="phone" name="phone" autocomplete="tel" />
                             </div>
-                        </div>
-                        <div class="form-3">
+                        </fieldset>
+                        <fieldset>
+                            <legend class="sr-only">Password Information</legend>
                             <div class="form-module">
-                                <label for="psw">PASSWORD</label>
-                                <input class="input-box" type="password" id="psw" name="psw" required/>
+                                <label for="password">PASSWORD</label>
+                                <input class="input-box" type="password" id="password" name="password"  autocomplete="new-password" minlength="8" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,12}$" required/>
                             </div>
                             <div class="form-module">
-                                <label for="pswc">CONFIRM PASSWORD</label>
-                                <input class="input-box" type="password" id="pswc" name="pswc" required/>
+                                <label for="confirmPassword">CONFIRM PASSWORD</label>
+                                <input class="input-box" type="password" id="confirmPassword" name="confirmPassword"  autocomplete="new-password" minlength="8" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,12}$" required/>
                             </div>
-                        </div>
+                        </fieldset>
                     </div>
                 </form>
             </div>
