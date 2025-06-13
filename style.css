@@ -73,16 +73,16 @@ h6 {
 /* Element font styling  */
 
 html {
-  font-size: calc(0.75rem + 1.5vw);
+  font-size: calc(0.40rem + 1.5vw);
 }
 
 .background-section > p {
-  font-size: calc(0.35rem + 0.2vw);
+  font-size: calc(0.35rem + 0.3vw);
   color: white;
 }
 
 .form-module > label {
-  font-size: calc(0.75rem + 0.3vw);
+  font-size: calc(0.40rem + 0.3vw);
 }
 
 div,
@@ -98,25 +98,39 @@ h2 {
 
 .login-account-section > p {
   font-weight: normal;
-  font-size: calc(0.75rem + 0.2vw);
+  font-size: calc(0.40rem + 0.2vw);
 }
 
 div {
   font-weight: normal;
 }
 
+input {
+  font-size: calc(0.45rem + 0.5vw);
+}
+
 /* Flexbox layout */
 
-.landing-page {
-  display: flex;
+html { 
+    height: 100%;
 }
+
+body {
+    height: 100%;
+}
+
+.landing-page {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Background left section */
 
 .background-section {
   flex: 0 0 40%;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100%;
   position: relative;
   overflow: hidden;
 }
@@ -145,3 +159,87 @@ div {
   max-width: 150px; /* Optional: Set a maximum width to prevent it from getting too big */
   height: auto; /* Maintain aspect ratio based on width */
 }
+
+/* Login right main section */
+
+.login-main-section {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Allows it to grow and shrink, taking remaining space */
+    padding: 20px 0;
+    /* This is crucial for scrollability if its content overflows */
+    overflow-y: auto;
+    /* If you want a background color to span the full height */
+    background-color: #f7f7f7;
+}
+
+.login-info-section,
+.login-account-section {
+    margin: 20px 40px;
+    padding: 10px;
+}
+
+.login-form-section {
+  background-color: white;
+  padding: 20px 50px;
+  box-shadow: 
+        0 -3px 10px -5px rgba(0, 0, 0, 0.2), /* Top shadow */
+        0 8px 10px -5px rgba(0, 0, 0, 0.2);   /* Bottom shadow */
+}
+
+/* Flexbox Form Layout */
+
+.login-form-section {
+  display: flex;
+}
+
+/* Form Styling */
+
+.form-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-1,
+.form-2,
+.form-3 {
+  flex: 1;
+  display: flex;
+  min-width: 620px;
+}
+
+.form-module {
+  margin: 0 10px 20px 0;
+}
+
+label {
+  display: block;
+  min-width: 132.5px;
+}
+
+input {
+  width: 300px;
+  border: 1px solid #E5E7EB;
+  border-radius: 5px;
+}
+
+input:invalid {
+  border-color: red;
+}
+
+.input-box:focus {
+  border-color: blue;
+  box-shadow: 
+        0 -3px 10px -5px rgba(28, 57, 246, 0.753), /* Top shadow */
+        0 3px 10px -5px rgba(28, 57, 246, 0.753);   /* Bottom shadow */
+}
+
+.input-box:focus-visible {
+  outline: none;
+}
+
+
+
+
+
+
