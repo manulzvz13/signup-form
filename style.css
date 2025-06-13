@@ -73,16 +73,16 @@ h6 {
 /* Element font styling  */
 
 html {
-  font-size: calc(0.40rem + 1.5vw);
+  font-size: clamp(14px, calc(1rem + 0.5vw), 24px);
 }
 
 .background-section > p {
-  font-size: calc(0.35rem + 0.3vw);
+  font-size: clamp(0.75rem, calc(0.35rem + 0.3vw), 0.875rem);
   color: white;
 }
 
 .form-module > label {
-  font-size: calc(0.40rem + 0.3vw);
+  font-size: clamp(0.8rem, calc(0.40rem + 0.3vw), 1.2rem);
 }
 
 div,
@@ -98,7 +98,12 @@ h2 {
 
 .login-account-section > p {
   font-weight: normal;
-  font-size: calc(0.40rem + 0.2vw);
+  font-size: clamp(0.875rem, calc(0.9rem + 0.25vw), 1.125rem);
+}
+
+.login-account-section > button {
+  font-weight: normal;
+  font-size: clamp(0.875rem, calc(0.9rem + 0.25vw), 1.125rem);
 }
 
 div {
@@ -106,7 +111,7 @@ div {
 }
 
 input {
-  font-size: calc(0.45rem + 0.5vw);
+  font-size: clamp(0.8rem, calc(0.40rem + 0.3vw), 1.2rem);
 }
 
 /* Flexbox layout */
@@ -218,7 +223,7 @@ label {
 }
 
 input {
-  width: 300px;
+  max-width: 300px;
   border: 1px solid #E5E7EB;
   border-radius: 5px;
 }
@@ -228,15 +233,69 @@ input:invalid {
 }
 
 .input-box:focus {
-  border-color: blue;
+  border-color: #91a8ae;
   box-shadow: 
-        0 -3px 10px -5px rgba(28, 57, 246, 0.753), /* Top shadow */
-        0 3px 10px -5px rgba(28, 57, 246, 0.753);   /* Bottom shadow */
+        0 -3px 10px -5px #91a8ae, /* Top shadow */
+        0 3px 10px -5px #91a8ae;   /* Bottom shadow */
 }
 
 .input-box:focus-visible {
   outline: none;
 }
+
+/* Submit Button and Log in anchor tag styling */
+
+button {
+  background-color: #91a8ae; 
+  border-style: none;
+  border-radius: 10px;
+  color: white;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 0.5rem 0.9rem;
+  margin: 0.25rem 0.25rem 1rem 0;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #d08b50;
+  text-decoration: none;
+}
+
+button:active {
+  background-color: #d08b50;
+  text-decoration: none;
+}
+
+.login-link:link {
+  color: #91a8ae;
+  text-decoration: none;
+}
+
+.login-link:visited {
+  color: #91a8ae;
+  text-decoration: none;
+}
+
+.login-link:hover {
+  color: #d08b50;
+  text-decoration: none;
+}
+
+.login-link:active {
+  color: #d08b50;
+  text-decoration: none;
+}
+
+/*
+
+ - CSS Variables
+ - Form improving
+ - 'responsive' units for layout
+
+*/
+
 
 
 
